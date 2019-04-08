@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.curso.java.spring.boot.entities_model.Cliente;
-import com.curso.java.spring.boot.entities_model.ClienteRepository;
+import com.curso.java.spring.boot.model.entities.Cliente;
+import com.curso.java.spring.boot.model.entities.ClienteRepository;
 
 @RestController
 public class ContraladorCliente {
