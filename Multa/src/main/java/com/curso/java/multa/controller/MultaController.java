@@ -1,4 +1,4 @@
-package com.curso.java.ejercicioConjunto.CRUD;
+package com.curso.java.multa.controller;
 
 import java.util.List;
 
@@ -8,15 +8,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.curso.java.ejercicioConjunto.modelo.Multa;
-import com.curso.java.ejercicioConjunto.modelo.MultaRepository;
+import com.curso.java.multa.model.MultaRepository;
+import com.curso.java.multa.model.entity.Multa;
 
-public class multaDAO {
+
+@RestController
+public class MultaController {
 	
 	private final MultaRepository repository;
 	
-	public multaDAO(MultaRepository repository) {
+	public MultaController(MultaRepository repository) {
+		super();
 		this.repository = repository;
 	}
 	
@@ -56,12 +60,6 @@ public class multaDAO {
 			
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }

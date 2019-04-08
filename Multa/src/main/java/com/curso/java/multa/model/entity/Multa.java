@@ -1,4 +1,4 @@
-package com.curso.java.ejercicioConjunto.modelo;
+package com.curso.java.multa.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,10 +11,26 @@ public class Multa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setCantidad(Double cantidad) {
+		this.cantidad = cantidad;
+	}
+
 	private String matricula;
 	private String categoria;
 	private Double cantidad;
 	
+	public Double getCantidad() {
+		return cantidad;
+	}
+
 	public Multa(String matricula, String categoria, double cantidad) {
 		super();
 		this.matricula = matricula;
@@ -22,13 +38,12 @@ public class Multa {
 		this.cantidad=cantidad;
 	}
 
-	public int getId() {
-		return id;
+	public Multa() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+
 
 	public String getMatricula() {
 		return matricula;
@@ -44,14 +59,6 @@ public class Multa {
 
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
-	}
-
-	public double getCantidad() {
-		return cantidad;
-	}
-
-	public void setCantidad(double cantidad) {
-		this.cantidad = cantidad;
 	}
 	
 	
