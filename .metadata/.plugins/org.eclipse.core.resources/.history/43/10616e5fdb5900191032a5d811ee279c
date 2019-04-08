@@ -1,0 +1,14 @@
+package com.curso.java.spring.boot.entities_model;
+
+@Entity
+public class Cliente {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String nombre;
+	private String apellido;
+	private String direccion;
+	private String matricula;
+	
+
+}

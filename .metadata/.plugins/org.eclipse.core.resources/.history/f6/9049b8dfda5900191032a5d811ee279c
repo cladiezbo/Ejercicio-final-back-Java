@@ -1,0 +1,5 @@
+package com.curso.java.spring.boot.entities;
+
+public class Cliente {
+
+}
