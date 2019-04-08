@@ -1,13 +1,10 @@
 package com.curso.java.spring.boot.config;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.context.annotation.Configuration;
 
-import com.curso.java.spring.boot.entities_model.Cliente;
-
+@Configuration
 public class Configuracion {
 	
-	public interface ClienteRepository  extends JpaRepository<Cliente, Integer>{
-
-	}
+	
 
 }

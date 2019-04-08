@@ -22,7 +22,6 @@ INDEX VERSION 1.131+C:\Users\aula3m\workspace-multas\.metadata\.plugins\org.ecli
 1411518876.index
 1937871924.index
 1640400684.index
-249265595.index
 3363692690.index
 268702974.index
 3789465284.index

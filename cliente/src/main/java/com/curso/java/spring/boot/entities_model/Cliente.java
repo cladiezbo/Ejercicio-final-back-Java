@@ -13,73 +13,73 @@ import javax.persistence.Id;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private String matricula;
 	private String nombre;
 	private String apellido;
 	private String direccion;
-	private String matricula;
 	
-	
-	
-	
-	
+
+	public Cliente(String matricula, String nombre, String apellido, String direccion) {
+		super();
+		this.matricula = matricula;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+	}
+
 	public Cliente() {
 		super();
 	}
-	public Cliente(Integer id, String nombre, String apellido, String direccion, String matricula) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.direccion = direccion;
-		this.matricula = matricula;
-	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getApellido() {
-		return apellido;
-	}
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-	public String getDireccion() {
-		return direccion;
-	}
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
-	}
+
 	public String getMatricula() {
 		return matricula;
 	}
+
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
 	@Override
 	public String toString() {
-		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion
-				+ ", matricula=" + matricula + "]";
+		return "Cliente [matricula=" + matricula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion="
+				+ direccion + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((apellido == null) ? 0 : apellido.hashCode());
 		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((matricula == null) ? 0 : matricula.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -99,11 +99,6 @@ public class Cliente {
 				return false;
 		} else if (!direccion.equals(other.direccion))
 			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
 		if (matricula == null) {
 			if (other.matricula != null)
 				return false;
@@ -118,6 +113,4 @@ public class Cliente {
 	}
 	
 	
-	
-
 }
